@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cold Electric 組織轉型與全球化發展三年總體計畫書</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans TC', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .timeline-item {
+            position: relative;
+            padding-bottom: 2rem;
+            padding-left: 2.5rem;
+        }
+        .timeline-item:not(:last-child)::before {
+            content: '';
+            position: absolute;
+            left: 18px;
+            top: 2rem;
+            width: 2px;
+            height: calc(100% - 2rem);
+            background-color: #e5e7eb;
+        }
+        .timeline-icon {
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 9999px;
+        }
+        .org-chart-node {
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid #d1d5db; /* gray-300 */
+            background-color: white;
+            text-align: center;
+            display: inline-block;
+            min-width: 110px;
+        }
+        .org-chart-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .connector-down { width: 2px; height: 1.5rem; background-color: #d1d5db; }
+        .connector-across { width: 100%; height: 2px; background-color: #d1d5db; }
+        
+        .details-marker {
+            transition: transform 0.2s ease-in-out;
+        }
+        details[open] .details-marker {
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- 頁首 -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <div class="container mx-auto px-6 py-4">
+            <h1 class="text-2xl md:text-3xl font-bold text-slate-900">Cold Electric 組織轉型總體計畫書</h1>
+            <p class="text-sm text-slate-500 mt-1">從奠定基石到引領全球的行動藍圖</p>
+        </div>
+    </header>
+
+    <!-- 主要內容 -->
+    <main class="container mx-auto px-6 py-8 md:py-12">
+
+        <!-- 執行摘要區塊 -->
+        <section id="summary" class="mb-16">
+            <h2 class="text-3xl font-bold mb-6 text-slate-900">計畫總覽</h2>
+            <div class="bg-white p-8 rounded-xl shadow-lg space-y-4 text-slate-700">
+                <p>本計畫書旨在提供一個清晰、務實且可執行的轉型路徑圖，目標是將Cold Electric從一個職權混亂、潛力未能發揮的小型工廠，系統性地升級為一個結構穩固、營運高效、具備國際競爭力的中大型企業。</p>
+                <p>我們深刻理解，任何宏大的擴張計畫都必須建立在穩定的基礎之上。因此，本計畫將嚴格遵循三大階段來推進，並建議成立**轉型專案辦公室 (TO)**，作為推動此藍圖的強力執行引擎。</p>
+            </div>
+        </section>
+
+        <!-- 目標組織架構圖 -->
+        <section id="target-org" class="mb-16">
+            <h2 class="text-3xl font-bold mb-6 text-slate-900">最終藍圖：目標組織架構</h2>
+            <div class="bg-white p-8 rounded-xl shadow-lg">
+                <div class="org-chart-container">
+                    <div class="org-chart-node bg-blue-100 border-blue-300 font-bold">CEO</div>
+                    <div class="connector-down"></div>
+                    <div class="connector-across"></div>
+                    <div class="flex w-full">
+                        <div class="w-1/3 flex justify-center"><div class="connector-down"></div></div>
+                        <div class="w-1/3 flex justify-center"><div class="connector-down"></div></div>
+                        <div class="w-1/3 flex justify-center"><div class="connector-down"></div></div>
+                    </div>
+                    <div class="flex justify-around w-full items-start">
+                        <!-- Manufacturing & Technology Pillar -->
+                        <div class="flex flex-col items-center space-y-3 w-1/3 px-2">
+                            <div class="org-chart-node bg-red-100 border-red-300 font-semibold w-full">製造與技術</div>
+                            <div class="connector-down"></div>
+                            <div class="space-y-2 w-full">
+                                <div class="org-chart-node text-xs bg-red-50 w-full">生產 / 製造工程</div>
+                                <div class="org-chart-node text-xs bg-red-50 w-full">品質 / 保證 / 控制</div>
+                                <div class="org-chart-node text-xs bg-red-50 w-full">研發 (R&D)</div>
+                            </div>
+                        </div>
+                        <!-- Operations Support Pillar -->
+                        <div class="flex flex-col items-center space-y-3 w-1/3 px-2">
+                            <div class="org-chart-node bg-indigo-100 border-indigo-300 font-semibold w-full">營運支援</div>
+                            <div class="connector-down"></div>
+                            <div class="space-y-2 w-full">
+                                <div class="org-chart-node text-xs bg-indigo-50 w-full">採購 / 供應鏈管理</div>
+                                <div class="org-chart-node text-xs bg-indigo-50 w-full">倉儲 / 物流</div>
+                                <div class="org-chart-node text-xs bg-indigo-50 w-full">廠務 / 維護</div>
+                                <div class="org-chart-node text-xs bg-indigo-50 w-full">環安衛 (EHS)</div>
+                            </div>
+                        </div>
+                        <!-- Business & Management Pillar -->
+                        <div class="flex flex-col items-center space-y-3 w-1/3 px-2">
+                            <div class="org-chart-node bg-green-100 border-green-300 font-semibold w-full">商業與管理</div>
+                            <div class="connector-down"></div>
+                             <div class="space-y-2 w-full">
+                                <div class="org-chart-node text-xs bg-green-50 w-full">營運 / 專案辦公室 (PMO)</div>
+                                <div class="org-chart-node text-xs bg-green-50 w-full">行政 / 人資</div>
+                                <div class="org-chart-node text-xs bg-green-50 w-full">資訊科技 / MIS</div>
+                                <div class="org-chart-node text-xs bg-green-50 w-full">銷售 / 客戶管理</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 組織演進圖 -->
+        <section id="org-evolution" class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 text-slate-900">組織演進圖：三階段達成目標</h2>
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- 第一階段 Org Chart -->
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold mb-1 text-red-700 text-center">第一階段</h3>
+                    <p class="text-sm text-slate-500 mb-6 text-center">終結混亂，建立秩序</p>
+                    <div class="org-chart-container">
+                        <div class="org-chart-node bg-blue-100 border-blue-300">CEO</div>
+                        <div class="connector-down"></div>
+                        <div class="connector-across"></div>
+                        <div class="flex w-full"><div class="w-1/3 flex justify-center"><div class="connector-down"></div></div><div class="w-1/3 flex justify-center"><div class="connector-down"></div></div><div class="w-1/3 flex justify-center"><div class="connector-down"></div></div></div>
+                        <div class="flex justify-around w-full text-sm">
+                           <div class="org-chart-node bg-red-50 border-red-300">製造技術負責人</div>
+                           <div class="org-chart-node bg-indigo-50 border-indigo-300">營運支援負責人</div>
+                           <div class="org-chart-node bg-green-50 border-green-300">商業管理負責人</div>
+                        </div>
+                    </div>
+                </div>
+                 <!-- 第二階段 Org Chart -->
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold mb-1 text-blue-700 text-center">第二階段</h3>
+                    <p class="text-sm text-slate-500 mb-6 text-center">系統化與專業分工</p>
+                     <div class="org-chart-container">
+                        <div class="org-chart-node bg-blue-100 border-blue-300">CEO</div>
+                        <div class="connector-down"></div>
+                        <div class="connector-across"></div>
+                        <div class="flex w-full"><div class="w-1/3 flex justify-center"><div class="connector-down"></div></div><div class="w-1/3 flex justify-center"><div class="connector-down"></div></div><div class="w-1/3 flex justify-center"><div class="connector-down"></div></div></div>
+                        <div class="flex justify-around w-full items-start">
+                           <div class="flex flex-col items-center space-y-3"><div class="org-chart-node bg-red-100 border-red-400">製造技術主管</div><div class="connector-down"></div><div class="org-chart-node text-xs bg-red-50">生產/工程</div><div class="org-chart-node text-xs bg-red-50">品保(QA)</div></div>
+                           <div class="flex flex-col items-center space-y-3"><div class="org-chart-node bg-indigo-100 border-indigo-400">營運支援主管</div><div class="connector-down"></div><div class="org-chart-node text-xs bg-indigo-50">採購/供應鏈</div></div>
+                           <div class="flex flex-col items-center space-y-3"><div class="org-chart-node bg-green-100 border-green-400">商業管理主管</div><div class="connector-down"></div><div class="org-chart-node text-xs bg-green-50">銷售/客戶管理</div><div class="org-chart-node text-xs bg-yellow-50">行政/人資</div></div>
+                        </div>
+                    </div>
+                </div>
+                 <!-- 第三階段 Org Chart -->
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold mb-1 text-green-700 text-center">第三階段</h3>
+                    <p class="text-sm text-slate-500 mb-6 text-center">全球化擴張</p>
+                    <div class="org-chart-container">
+                        <div class="org-chart-node bg-blue-100 border-blue-300">CEO</div>
+                        <div class="connector-down"></div>
+                        <div class="connector-across"></div>
+                        <div class="flex w-full"><div class="w-1/3 flex justify-center"><div class="connector-down"></div></div><div class="w-1/3 flex justify-center"><div class="connector-down"></div></div><div class="w-1/3 flex justify-center"><div class="connector-down"></div></div></div>
+                        <div class="flex justify-around w-full items-start">
+                           <div class="flex flex-col items-center space-y-3"><div class="org-chart-node bg-red-200 border-red-500 font-semibold">營運長 (COO)</div><div class="org-chart-node text-xs bg-red-50">製造技術 & 營運支援</div></div>
+                           <div class="flex flex-col items-center space-y-3"><div class="org-chart-node bg-yellow-200 border-yellow-500 font-semibold">支援中心</div><div class="org-chart-node text-xs bg-yellow-50">財務長 (CFO)</div><div class="org-chart-node text-xs bg-yellow-50">人資主管</div></div>
+                           <div class="flex flex-col items-center space-y-3"><div class="org-chart-node bg-green-200 border-green-500 font-semibold">商務長 (CCO)</div><div class="org-chart-node text-xs bg-green-50">商業管理體系</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 時間軸區塊 -->
+        <section id="roadmap">
+            <h2 class="text-3xl font-bold mb-8 text-slate-900">行動藍圖與時程</h2>
+
+            <!-- 三階段總覽線性時間軸 -->
+            <div class="w-full mb-12">
+                <div class="relative w-full h-2.5 bg-slate-200 rounded-full">
+                    <div class="absolute top-0 left-0 h-2.5 bg-red-500 rounded-l-full" style="width: 25%;"></div>
+                    <div class="absolute top-0 left-[25%] h-2.5 bg-blue-500" style="width: 35%;"></div>
+                    <div class="absolute top-0 left-[60%] h-2.5 bg-green-500 rounded-r-full" style="width: 40%;"></div>
+                </div>
+                <div class="flex justify-between text-xs mt-2">
+                    <div class="w-[25%] font-semibold text-red-700">第一階段 (9個月)</div>
+                    <div class="w-[35%] text-center font-semibold text-blue-700">第二階段 (12個月)</div>
+                    <div class="w-[40%] text-right font-semibold text-green-700">第三階段 (15個月)</div>
+                </div>
+            </div>
+            
+            <div class="space-y-12">
+                <!-- 第一階段 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-red-100 text-red-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" /></svg>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-2xl font-bold text-red-700">第一階段：終結混亂，建立秩序</h3>
+                        <p class="text-sm text-slate-500 mb-4">未來9個月</p>
+                        <p class="mb-6 font-medium text-slate-700">目標：解決當前最急迫的管理危機，建立三大支柱的基礎職能，明確劃分權責，讓組織運作有法可依。</p>
+                        
+                        <!-- 詳細計畫 Accordion -->
+                        <details class="bg-slate-100/80 rounded-lg group">
+                            <summary class="p-4 font-semibold cursor-pointer flex justify-between items-center">
+                                點此展開第一階段詳細行動計畫
+                                <svg class="h-5 w-5 details-marker" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+                            </summary>
+                            <div class="p-6 border-t border-slate-200">
+                               <div class="space-y-6">
+                                    <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-red-500">
+                                        <h4 class="font-bold text-lg mb-2">製造與技術</h4>
+                                        <ul class="list-disc list-inside space-y-1 text-slate-700">
+                                            <li>任命「製造技術負責人」，統一指揮生產、工程與品質。</li>
+                                            <li>建立關鍵工站的標準作業程序 (SOP) V1.0。</li>
+                                            <li>將品管(QC)人員的匯報線與生產線分離，確保獨立性。</li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-indigo-500">
+                                        <h4 class="font-bold text-lg mb-2">營運支援</h4>
+                                        <ul class="list-disc list-inside space-y-1 text-slate-700">
+                                            <li>任命「營運支援負責人」，整合採購、倉儲、廠務。</li>
+                                            <li>建立標準的採購申請與審批流程。</li>
+                                            <li>實施倉儲物料的定期盤點制度。</li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-green-500">
+                                        <h4 class="font-bold text-lg mb-2">商業與管理</h4>
+                                        <ul class="list-disc list-inside space-y-1 text-slate-700">
+                                            <li>任命「商業管理負責人」，統籌銷售與行政。</li>
+                                            <li>**緊急處理薪資保密危機**。</li>
+                                            <li>**招聘**獨立的「人資專員」與「財務規劃(FP&A)經理」。</li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-purple-500">
+                                        <h4 class="font-bold text-lg mb-2">文化與溝通</h4>
+                                        <ul class="list-disc list-inside space-y-1 text-slate-700">
+                                            <li>CEO召集主管，**定義公司核心價值觀 (Mission, Vision, Values)**。</li>
+                                            <li>建立**「每週經營會議」**作為核心溝通管道，並建立會議記錄與追蹤機制。</li>
+                                        </ul>
+                                    </div>
+                               </div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
+                <!-- 第二階段 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-blue-100 text-blue-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10.392C2.057 15.71 3.245 16 4.5 16h1.054c.254-1.681.734-3.223 1.396-4.571l.028-.055A1 1 0 018.38 10h1.24c.482 0 .922.192 1.239.504l.028.027c.538.52 1.026 1.12 1.444 1.797.432.698.776 1.459.99 2.261H14.5c1.255 0 2.443-.29 3.5-.804V4.804C17.443 4.29 16.255 4 15 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 002 0V6.414l-1.5-1.5L9 6.414V12a1 1 0 002 0V4.804z" /></svg>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-2xl font-bold text-blue-700">第二階段：系統化與專業分工</h3>
+                        <p class="text-sm text-slate-500 mb-4">第10至21個月</p>
+                        <p class="mb-6 font-medium text-slate-700">目標：導入管理系統，深化各支柱下的專業職能，打造可規模化的營運平台。</p>
+
+                        <!-- 詳細計畫 Accordion -->
+                        <details class="bg-slate-100/80 rounded-lg group">
+                            <summary class="p-4 font-semibold cursor-pointer flex justify-between items-center">
+                                點此展開第二階段詳細行動計畫
+                                <svg class="h-5 w-5 details-marker" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+                            </summary>
+                            <div class="p-6 border-t border-slate-200">
+                               <div class="grid md:grid-cols-2 gap-6">
+                                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                                        <h4 class="font-bold text-lg mb-2">組織與系統</h4>
+                                        <ul class="list-disc list-inside space-y-1 text-slate-700">
+                                            <li>導入ERP與CRM系統。</li>
+                                            <li>成立獨立的品保課(QA)、產品管理(PM)、國際業務部。</li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                                        <h4 class="font-bold text-lg mb-2">人力資源</h4>
+                                        <ul class="list-disc list-inside space-y-1 text-slate-700">
+                                            <li>**設計新的薪資級距與職等結構**。</li>
+                                            <li>建立並實施「績效考核與薪酬管理辦法」。</li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-white p-6 rounded-lg shadow-sm col-span-2">
+                                        <h4 class="font-bold text-lg mb-2">文化與溝通</h4>
+                                        <ul class="list-disc list-inside space-y-1 text-slate-700">
+                                            <li>(啟動) **建立全員溝通管道**：如每月公司早會或內部電子報。</li>
+                                            <li>(推動) 建立**員工意見回饋機制** (如意見箱、定期訪談)。</li>
+                                            <li>(建立) **員工表揚計畫**，公開獎勵符合公司價值觀的行為。</li>
+                                        </ul>
+                                    </div>
+                               </div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
+                <!-- 第三階段 -->
+                <div class="timeline-item">
+                     <div class="timeline-icon bg-green-100 text-green-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.72 7.97 5 10 5c2.03 0 3.488.72 3.758 1.321l.002.006v.002a.75.75 0 01-.692.816l-.007.002a.75.75 0 01-.816-.692l-.002-.006a.75.75 0 01.002-.006l-.002.002c-.114-.245-.583-.797-2.25-.797-1.33 0-2.313.48-2.671 1.052l-.002.003v-.002a.75.75 0 01.18.665l.002.006a.75.75 0 01-.665-.18l-.006-.002a.75.75 0 01-.18-.665l.002.002zM10 15a5.994 5.994 0 003.75-1.321l.002-.002v-.002a.75.75 0 011.39.57l-.002.006v.002a.75.75 0 01-.57-1.39l.002-.002v.002c.245.114.797.583.797 2.25 0 1.33-.48 2.313-1.052 2.671l-.003.002h.002a.75.75 0 01-.664-.18l-.006-.002a.75.75 0 01.18.664l.002.006a.75.75 0 01-.664.18l-.006.002a.75.75 0 01-.664-.18l.002.006a.75.75 0 01-.18-.664v.002a6.012 6.012 0 01-2.706-1.912C5.72 13.488 5 12.03 5 10c0-2.03.72-3.488 1.321-3.758l.006-.002h.002a.75.75 0 01.816.692l.002.006a.75.75 0 01-.816.692l-.006-.002a.75.75 0 01-.692-.816l.002.006a.75.75 0 01.692.816l-.002.002z" clip-rule="evenodd" /></svg>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-2xl font-bold text-green-700">第三階段：全球化擴張與優化</h3>
+                        <p class="text-sm text-slate-500 mb-4">第22至36個月</p>
+                        <p class="mb-6 font-medium text-slate-700">目標：複製成功模式至全球，建立品牌與持續創新的能力，鞏固行業領導地位。</p>
+                        
+                        <!-- 詳細計畫 Accordion -->
+                        <details class="bg-slate-100/80 rounded-lg group">
+                            <summary class="p-4 font-semibold cursor-pointer flex justify-between items-center">
+                                點此展開第三階段詳細行動計畫
+                                <svg class="h-5 w-5 details-marker" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+                            </summary>
+                            <div class="p-6 border-t border-slate-200">
+                               <div class="grid md:grid-cols-2 gap-6">
+                                     <div class="bg-white p-6 rounded-lg shadow-sm">
+                                        <h4 class="font-bold text-lg mb-2">組織與全球化</h4>
+                                        <ul class="list-disc list-inside space-y-1 text-slate-700">
+                                            <li>(落地) 在重點海外市場設立據點。</li>
+                                            <li>(升級) 工廠導入MES，商業體系成立獨立行銷部。</li>
+                                            <li>(創新) 成立「前瞻技術組」。</li>
+                                            <li>(認證) 推動並取得ISO 9001/14001等國際認證。</li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                                        <h4 class="font-bold text-lg mb-2">文化與人才</h4>
+                                        <ul class="list-disc list-inside space-y-1 text-slate-700">
+                                            <li>(執行) **全面導入新薪酬制度**，並與員工透明溝通。</li>
+                                            <li>(深化) 將公司文化與價值觀，融入全球據點的日常營運。</li>
+                                            <li>(發展) 建立關鍵崗位的**領導力發展計畫**。</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 頁尾 -->
+    <footer class="bg-slate-800 text-white mt-16">
+        <div class="container mx-auto px-6 py-4 text-center">
+            <p>&copy; 2025 Cold Electric. All Rights Reserved.</p>
+            <p class="text-sm text-slate-400">組織轉型辦公室 (TO) 監製</p>
+        </div>
+    </footer>
+
+</body>
+</html>
